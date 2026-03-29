@@ -16,6 +16,25 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
+/* Tvoja nova navigacia pre Vercel */
+.main-nav {
+  background: var(--off);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  text-align: center;
+  font-size: 12px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: var(--accent);
+}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .w1{animation:fadeUp .55s ease both}
@@ -96,118 +115,124 @@ h1 em{font-style:italic;color:var(--accent)}
 .sticky-btn:hover{background:var(--accent2)}
 
 @media(max-width:480px){
-  .article{padding:24px 16px 0}
-  .hero{height:200px}
-  .mega-cta{padding:28px 18px;margin:28px -4px}
-  .comments{padding:0 16px 24px}
-  .disclaimer{padding:14px 16px 36px}
-  .sticky-txt{font-size:12px}
+  .article{padding:24px 16px 0}
+  .hero{height:200px}
+  .mega-cta{padding:28px 18px;margin:28px -4px}
+  .comments{padding:0 16px 24px}
+  .disclaimer{padding:14px 16px 36px}
+  .sticky-txt{font-size:12px}
 }
 </style>
 </head>
 <body>
 
+<nav class="main-nav">
+  <a href="/">Home</a>
+  <a href="/study">Study</a>
+  <a href="/thanks">Thanks</a>
+</nav>
+
 <nav class="nav">
-  <div class="nav-logo">Women's <em>Health</em> Insider</div>
-  <div class="nav-tag">Sponsored</div>
+  <div class="nav-logo">Women's <em>Health</em> Insider</div>
+  <div class="nav-tag">Sponsored</div>
 </nav>
 
 <article class="article">
-  <div class="cat-tag w1">🔥 Trending This Week</div>
-  <h1 class="w2">She Was Told <em>"It's Just Your Age"</em> — 6 Months Later, She'd Lost 37 Pounds Without the Gym</h1>
-  <p class="deck w3">How a frustrated 43-year-old mom discovered the real reason women over 40 can't lose weight — and what she did about it in 21 days.</p>
+  <div class="cat-tag w1">🔥 Trending This Week</div>
+  <h1 class="w2">She Was Told <em>"It's Just Your Age"</em> — 6 Months Later, She'd Lost 37 Pounds Without the Gym</h1>
+  <p class="deck w3">How a frustrated 43-year-old mom discovered the real reason women over 40 can't lose weight — and what she did about it in 21 days.</p>
 
-  <div class="byline w4">
-    <div class="bav">DR</div>
-    <div>
-      <div class="bname">Dr. Rebecca Shaw, Health Editor</div>
-      <div class="bdate">June 12, 2025 · 6 min read</div>
-    </div>
-  </div>
+  <div class="byline w4">
+    <div class="bav">DR</div>
+    <div>
+      <div class="bname">Dr. Rebecca Shaw, Health Editor</div>
+      <div class="bdate">June 12, 2025 · 6 min read</div>
+    </div>
+  </div>
 
-  <div class="hero wh">
-    <div class="hero-cap">Jennifer, 43, before discovering the method vs. 6 months after. Photo provided.</div>
-  </div>
-  <div class="img-note w5">Results based on personal experience. Individual results may vary.</div>
+  <div class="hero wh">
+    <div class="hero-cap">Jennifer, 43, before discovering the method vs. 6 months after. Photo provided.</div>
+  </div>
+  <div class="img-note w5">Results based on personal experience. Individual results may vary.</div>
 
-  <div class="body">
-    <p class="lead">Jennifer Lawson remembers the exact moment she decided something had to change. She was getting dressed for her daughter's school recital — and nothing fit.</p>
+  <div class="body">
+    <p class="lead">Jennifer Lawson remembers the exact moment she decided something had to change. She was getting dressed for her daughter's school recital — and nothing fit.</p>
 
-    <p><em>"I ended up wearing my husband's oversized blazer just to hide my body,"</em> she recalls. <em>"I sat in that auditorium feeling completely invisible. Not because nobody noticed me — but because I'd stopped <strong>wanting</strong> to be noticed at all."</em></p>
+    <p><em>"I ended up wearing my husband's oversized blazer just to hide my body,"</em> she recalls. <em>"I sat in that auditorium feeling completely invisible. Not because nobody noticed me — but because I'd stopped <strong>wanting</strong> to be noticed at all."</em></p>
 
-    <p>At 43, Jennifer was exhausted before noon. She'd gained 40 pounds since her late thirties. She'd tried everything — Weight Watchers, Keto, intermittent fasting, a gym membership she used for four months until her knees gave out. Nothing worked.</p>
+    <p>At 43, Jennifer was exhausted before noon. She'd gained 40 pounds since her late thirties. She'd tried everything — Weight Watchers, Keto, intermittent fasting, a gym membership she used for four months until her knees gave out. Nothing worked.</p>
 
-    <h2>The Breaking Point</h2>
+    <h2>The Breaking Point</h2>
 
-    <div class="pullquote">"My doctor told me to 'eat less and move more.' I wanted to scream. I <strong>was</strong> trying. Harder than I ever had in my life. And I was still gaining weight."</div>
+    <div class="pullquote">"My doctor told me to 'eat less and move more.' I wanted to scream. I <strong>was</strong> trying. Harder than I ever had in my life. And I was still gaining weight."</div>
 
-    <p>She's far from alone. Research confirms that women over 40 face a unique metabolic challenge that most programs completely ignore. Declining estrogen fundamentally changes how the body stores fat — and the advice designed for 25-year-olds often backfires spectacularly for women in their forties.</p>
+    <p>She's far from alone. Research confirms that women over 40 face a unique metabolic challenge that most programs completely ignore. Declining estrogen fundamentally changes how the body stores fat — and the advice designed for 25-year-olds often backfires spectacularly for women in their forties.</p>
 
-    <p>Even more alarming: intense exercise can actually <strong>increase cortisol levels</strong> in women over 40, leading to more fat storage around the midsection. The very thing doctors recommend is making the problem worse.</p>
+    <p>Even more alarming: intense exercise can actually <strong>increase cortisol levels</strong> in women over 40, leading to more fat storage around the midsection. The very thing doctors recommend is making the problem worse.</p>
 
-    <h2>The Discovery That Changed Everything</h2>
+    <h2>The Discovery That Changed Everything</h2>
 
-    <p>Jennifer's turning point came from a nutritional specialist who had spent over a decade studying metabolism specifically in women over 40. The approach was surprisingly simple:</p>
+    <p>Jennifer's turning point came from a nutritional specialist who had spent over a decade studying metabolism specifically in women over 40. The approach was surprisingly simple:</p>
 
-    <p><strong>No gym. No extreme diets. No eliminating food groups.</strong> Just a clear system built around how a woman's body actually functions after 40 — not how it functioned fifteen years ago.</p>
+    <p><strong>No gym. No extreme diets. No eliminating food groups.</strong> Just a clear system built around how a woman's body actually functions after 40 — not how it functioned fifteen years ago.</p>
 
-    <div class="pullquote">"By week two, I was sleeping properly for the first time in years. By week three, my jeans were looser. By month two, I'd dropped 14 pounds — and hadn't done a single burpee."</div>
+    <div class="pullquote">"By week two, I was sleeping properly for the first time in years. By week three, my jeans were looser. By month two, I'd dropped 14 pounds — and hadn't done a single burpee."</div>
 
-    <h2>Six Months Later</h2>
+    <h2>Six Months Later</h2>
 
-    <p>Jennifer had lost <strong>37 pounds</strong>. But the number was only part of the story.</p>
+    <p>Jennifer had lost <strong>37 pounds</strong>. But the number was only part of the story.</p>
 
-    <p><em>"I sleep through the night. My energy is back. My mood swings are gone. My husband says I look like the woman he married 20 years ago. Honestly? I feel <strong>better</strong> than I did at 25."</em></p>
+    <p><em>"I sleep through the night. My energy is back. My mood swings are gone. My husband says I look like the woman he married 20 years ago. Honestly? I feel <strong>better</strong> than I did at 25."</em></p>
 
-    <div class="results-box">
-      <h4>What women are reporting after the program</h4>
-      <ul>
-        <li><strong>Margaret, 51:</strong> "Down 28 pounds in 4 months. I look forward to getting dressed every morning."</li>
-        <li><strong>Diana, 45:</strong> "Lost 19 pounds. I have energy to keep up with my kids again."</li>
-        <li><strong>Susan, 48:</strong> "My doctor couldn't believe my bloodwork. Everything improved."</li>
-        <li><strong>Karen, 52:</strong> "Spent $4,000 on a trainer and lost nothing. This worked in three weeks."</li>
-      </ul>
-    </div>
+    <div class="results-box">
+      <h4>What women are reporting after the program</h4>
+      <ul>
+        <li><strong>Margaret, 51:</strong> "Down 28 pounds in 4 months. I look forward to getting dressed every morning."</li>
+        <li><strong>Diana, 45:</strong> "Lost 19 pounds. I have energy to keep up with my kids again."</li>
+        <li><strong>Susan, 48:</strong> "My doctor couldn't believe my bloodwork. Everything improved."</li>
+        <li><strong>Karen, 52:</strong> "Spent $4,000 on a trainer and lost nothing. This worked in three weeks."</li>
+      </ul>
+    </div>
 
-    <p>The program — <strong>The Slim After 40 Blueprint</strong> — has now helped over 12,000 women break through the weight loss plateau that comes after 40. If you've ever felt like your body is working against you, this is probably why.</p>
+    <p>The program — <strong>The Slim After 40 Blueprint</strong> — has now helped over 12,000 women break through the weight loss plateau that comes after 40. If you've ever felt like your body is working against you, this is probably why.</p>
 
-    <div class="mega-cta">
-      <div class="viewers"><span class="rdot"></span><span id="vcount">2,847</span> women viewing this now</div>
-      <h3>Ready to See What This Can Do for You?</h3>
-      <p>Join 12,000+ women who stopped struggling and started seeing real results — no gym required.</p>
-      <a href="sales.html" class="btn-cta" onclick="fbq('track','ViewContent')">
-        See the Full Program →
-      </a>
-      <div class="cta-note">🔒 Secure &nbsp;·&nbsp; ⚡ Instant Access &nbsp;·&nbsp; ↩️ 24-Hour Money-Back</div>
-    </div>
-  </div>
+    <div class="mega-cta">
+      <div class="viewers"><span class="rdot"></span><span id="vcount">2,847</span> women viewing this now</div>
+      <h3>Ready to See What This Can Do for You?</h3>
+      <p>Join 12,000+ women who stopped struggling and started seeing real results — no gym required.</p>
+      <a href="sales.html" class="btn-cta" onclick="fbq('track','ViewContent')">
+        See the Full Program →
+      </a>
+      <div class="cta-note">🔒 Secure &nbsp;·&nbsp; ⚡ Instant Access &nbsp;·&nbsp; ↩️ 24-Hour Money-Back</div>
+    </div>
+  </div>
 </article>
 
 <div class="comments">
-  <div class="ctitle">💬 Comments (147)</div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">LM</div>
-    <div><div class="cname">Linda M. <span>· 2 days ago</span></div><div class="cbody">I was VERY skeptical but I just hit week 4 and I'm down 11 pounds. I haven't changed my weight in 3 years. This is life changing. Thank you!!</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#ec4899,#be185d)">PA</div>
-    <div><div class="cname">Patricia A. <span>· 5 days ago</span></div><div class="cbody">My sister sent me this. I'm 49 and was starting to think it was too late for me. Two weeks in and the bloating alone being gone is worth everything.</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#f97316,#c2410c)">DS</div>
-    <div><div class="cname">Donna S. <span>· 1 week ago</span></div><div class="cbody">Just ordered. If even half of what these women say is true, it's worth every penny. Will report back! 🤞</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">RH</div>
-    <div><div class="cname">Rachel H. <span>· UPDATE · 1 week ago</span></div><div class="cbody">UPDATE: 6 weeks in. Down 15 pounds. Sleeping through the night for the first time in years. This is real. 💕</div></div>
-  </div>
+  <div class="ctitle">💬 Comments (147)</div>
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">LM</div>
+    <div><div class="cname">Linda M. <span>· 2 days ago</span></div><div class="cbody">I was VERY skeptical but I just hit week 4 and I'm down 11 pounds. I haven't changed my weight in 3 years. This is life changing. Thank you!!</div></div>
+  </div>
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#ec4899,#be185d)">PA</div>
+    <div><div class="cname">Patricia A. <span>· 5 days ago</span></div><div class="cbody">My sister sent me this. I'm 49 and was starting to think it was too late for me. Two weeks in and the bloating alone being gone is worth everything.</div></div>
+  </div>
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#f97316,#c2410c)">DS</div>
+    <div><div class="cname">Donna S. <span>· 1 week ago</span></div><div class="cbody">Just ordered. If even half of what these women say is true, it's worth every penny. Will report back! 🤞</div></div>
+  </div>
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">RH</div>
+    <div><div class="cname">Rachel H. <span>· UPDATE · 1 week ago</span></div><div class="cbody">UPDATE: 6 weeks in. Down 15 pounds. Sleeping through the night for the first time in years. This is real. 💕</div></div>
+  </div>
 </div>
 
 <div class="disclaimer">*Individual results may vary. This is sponsored content containing affiliate links. Not intended as medical advice. Consult your healthcare provider before starting any new program.</div>
 
 <div class="sticky" id="sticky">
-  <div class="sticky-txt">🔥 12,000+ women have tried this</div>
-  <button class="sticky-btn" onclick="window.location.href='sales.html'">See the Program →</button>
+  <div class="sticky-txt">🔥 12,000+ women have tried this</div>
+  <button class="sticky-btn" onclick="window.location.href='sales.html'">See the Program →</button>
 </div>
 
 <script>
