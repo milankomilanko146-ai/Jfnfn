@@ -5,240 +5,485 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why Women Over 40 Can't Lose Weight — Women's Health Insider</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','PIXEL_ID');fbq('track','PageView');
+fbq('init','PIXEL_ID');
+fbq('track','PageView');
 </script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--white:#fff;--off:#f9f8f6;--border:#e8e4de;--text:#111;--muted:#666;--light:#aaa;--accent:#c0392b;--accent2:#a93226;--green:#16a34a}
+:root{
+  --white:#fff;
+  --off:#f9f8f6;
+  --border:#e5e1db;
+  --text:#111;
+  --muted:#6b7280;
+  --light:#9ca3af;
+  --accent:#b91c1c;
+  --accent2:#991b1b;
+  --green:#16a34a;
+}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-/* Tvoja nova navigacia pre Vercel */
-.main-nav {
-  background: var(--off);
-  border-bottom: 1px solid var(--border);
-  padding: 8px 0;
-  text-align: center;
-  font-size: 12px;
-}
-.main-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  margin: 0 15px;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-.main-nav a:hover {
-  color: var(--accent);
-}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.w1{animation:fadeUp .55s ease both}
-.w2{animation:fadeUp .55s .12s ease both}
-.w3{animation:fadeUp .55s .24s ease both}
-.w4{animation:fadeUp .55s .36s ease both}
-.w5{animation:fadeUp .55s .48s ease both}
-.wh{animation:fadeIn .8s .1s ease both}
-
-.nav{background:var(--white);border-bottom:1px solid var(--border);padding:12px 20px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:700}
+/* ── NAV ── */
+.nav{background:var(--white);border-bottom:1px solid var(--border);padding:11px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.nav-logo{font-family:'Playfair Display',serif;font-size:16.5px;font-weight:700;color:var(--text);text-decoration:none}
 .nav-logo em{font-style:italic;color:var(--accent)}
-.nav-tag{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;background:var(--off);padding:3px 10px;border-radius:20px;border:1px solid var(--border)}
+.nav-sponsored{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;background:var(--off);border:1px solid var(--border);padding:3px 9px;border-radius:20px}
 
-.article{max-width:660px;margin:0 auto;padding:36px 20px 0}
+/* ─────────────────────────────────────
+   WOW HERO — dark cinematic full-bleed
+───────────────────────────────────── */
+.hero-section{
+  background:#0d0707;
+  position:relative;
+  overflow:hidden;
+  padding:52px 24px 0;
+  min-height:540px;
+  display:flex;
+  flex-direction:column;
+}
 
-.cat-tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:10.5px;font-weight:700;padding:4px 11px;border-radius:20px;text-transform:uppercase;letter-spacing:.7px;margin-bottom:18px}
+/* Radial glow blobs */
+.hero-section::before{
+  content:'';
+  position:absolute;
+  top:-100px;right:-80px;
+  width:480px;height:480px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(185,28,28,.32),transparent 65%);
+  pointer-events:none;
+}
+.hero-section::after{
+  content:'';
+  position:absolute;
+  bottom:-60px;left:-60px;
+  width:360px;height:360px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(120,10,10,.2),transparent 65%);
+  pointer-events:none;
+}
 
-h1{font-family:'Playfair Display',serif;font-size:clamp(25px,5.5vw,40px);line-height:1.17;font-weight:700;margin-bottom:14px;letter-spacing:-.02em}
-h1 em{font-style:italic;color:var(--accent)}
+.hero-inner{
+  max-width:680px;
+  margin:0 auto;
+  width:100%;
+  position:relative;
+  z-index:2;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-bottom:60px;
+}
 
-.deck{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+/* Live badge */
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(185,28,28,.18);
+  border:1px solid rgba(185,28,28,.32);
+  color:#fca5a5;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:5px 13px;
+  border-radius:20px;
+  margin-bottom:22px;
+  animation:fadeIn .5s ease;
+  width:fit-content;
+}
+.badge-dot{width:6px;height:6px;background:#ef4444;border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
-.byline{display:flex;align-items:center;gap:10px;margin-bottom:28px}
-.bav{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#f9a8a8,#c0392b);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;flex-shrink:0;font-family:'Playfair Display',serif}
-.bname{font-size:13px;font-weight:600}
-.bdate{font-size:12px;color:var(--muted);margin-top:1px}
+/* THE HEADLINE — biggest most impactful */
+.hero-headline{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,7vw,58px);
+  line-height:1.1;
+  font-weight:800;
+  color:#fff;
+  margin-bottom:18px;
+  letter-spacing:-.03em;
+  animation:slideUp .6s .05s ease both;
+}
+.hero-headline em{
+  font-style:italic;
+  color:#fda4a4;
+}
 
-.hero{width:100%;border-radius:10px;margin-bottom:8px;background:linear-gradient(160deg,#fce8e8 0%,#f5c6c6 55%,#dea0a0 100%);height:240px;display:flex;align-items:flex-end;padding:16px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(192,57,43,.15),transparent 60%),radial-gradient(ellipse at 10% 90%,rgba(192,57,43,.1),transparent 50%)}
-.hero-cap{position:relative;font-size:11px;color:#7f1d1d;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:6px;backdrop-filter:blur(4px)}
-.img-note{font-size:11px;color:var(--light);margin-bottom:28px;font-style:italic}
+.hero-sub{
+  font-size:clamp(14.5px,2.5vw,17px);
+  color:rgba(255,255,255,.6);
+  line-height:1.68;
+  margin-bottom:30px;
+  max-width:520px;
+  animation:slideUp .6s .18s ease both;
+}
 
-.body p{font-size:16px;line-height:1.85;color:#2a2a2a;margin-bottom:20px}
-.body p.lead{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--text);line-height:1.72}
+/* Byline row */
+.hero-byline{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  animation:slideUp .6s .3s ease both;
+  padding-bottom:2px;
+}
+.hero-av{
+  width:38px;height:38px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#fca5a5,#b91c1c);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:13px;color:#fff;flex-shrink:0;
+  font-family:'Playfair Display',serif;
+  border:2px solid rgba(255,255,255,.15);
+}
+.hero-byline-name{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.85)}
+.hero-byline-date{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* fade to white at bottom */
+.hero-fade{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:90px;
+  background:linear-gradient(to bottom,transparent,var(--white));
+  z-index:3;
+  pointer-events:none;
+}
+
+/* ── ARTICLE ── */
+.article{max-width:660px;margin:0 auto;padding:28px 20px 0}
+
+.body p{font-size:16.5px;line-height:1.88;color:#252525;margin-bottom:22px}
+.body p.lead{font-family:'Playfair Display',serif;font-size:18.5px;font-style:italic;color:var(--text);line-height:1.7}
 .body strong{color:var(--text);font-weight:700}
-.body h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin:36px 0 14px}
+.body em{font-style:italic}
+.body h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin:38px 0 14px;color:var(--text);letter-spacing:-.01em}
 
-.pullquote{border-left:3px solid var(--accent);padding:14px 20px;margin:22px 0;background:var(--off);border-radius:0 8px 8px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.65;color:#333}
+.pullquote{
+  border-left:3px solid var(--accent);
+  padding:14px 20px;
+  margin:24px 0;
+  background:var(--off);
+  border-radius:0 8px 8px 0;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:17.5px;
+  line-height:1.62;
+  color:#333;
+}
 
-.results-box{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:20px 22px;margin:22px 0}
+.results-box{
+  background:var(--off);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:20px 22px;
+  margin:24px 0;
+}
 .results-box h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:14px}
 .results-box ul{list-style:none}
-.results-box li{font-size:14.5px;padding:6px 0;display:flex;gap:8px;align-items:flex-start;line-height:1.55;color:#222;border-bottom:1px solid var(--border)}
+.results-box li{font-size:14.5px;padding:7px 0;display:flex;gap:9px;align-items:flex-start;line-height:1.55;color:#222;border-bottom:1px solid var(--border)}
 .results-box li:last-child{border-bottom:none}
 .results-box li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:2px}
 
-/* MEGA CTA */
-.mega-cta{margin:36px 0 28px;background:#111;border-radius:12px;padding:36px 24px;text-align:center;position:relative;overflow:hidden}
-.mega-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 20%,rgba(192,57,43,.22),transparent 55%)}
-.viewers{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#fca5a5;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;position:relative}
-.rdot{width:6px;height:6px;background:#ef4444;border-radius:50%;animation:blink 1.5s infinite;flex-shrink:0}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.mega-cta h3{font-family:'Playfair Display',serif;font-size:clamp(19px,4vw,25px);color:#fff;margin-bottom:8px;position:relative;line-height:1.3}
-.mega-cta p{color:rgba(255,255,255,.58);font-size:14px;margin-bottom:22px;line-height:1.65;max-width:400px;margin-left:auto;margin-right:auto;position:relative}
-.btn-cta{display:block;width:100%;max-width:400px;margin:0 auto;background:var(--accent);color:#fff;padding:17px 28px;border-radius:8px;font-size:15.5px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .22s;letter-spacing:.02em;position:relative;overflow:hidden}
-.btn-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:left .5s}
-.btn-cta:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(192,57,43,.4)}
-.btn-cta:hover::after{left:100%}
-.cta-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:11px;position:relative}
+/* ── MEGA CTA ── */
+.mega-cta{
+  margin:36px 0 32px;
+  background:#0d0707;
+  border-radius:14px;
+  padding:40px 28px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.mega-cta::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 20%,rgba(185,28,28,.25),transparent 55%);
+  pointer-events:none;
+}
+.viewers-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(185,28,28,.18);
+  border:1px solid rgba(185,28,28,.3);
+  color:#fca5a5;
+  font-size:11.5px;font-weight:600;
+  padding:5px 14px;border-radius:20px;
+  margin-bottom:18px;position:relative;
+}
+.rdot{width:6px;height:6px;background:#ef4444;border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+.mega-cta h3{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(19px,4vw,26px);
+  color:#fff;
+  margin-bottom:10px;
+  position:relative;
+  line-height:1.28;
+}
+.mega-cta p{
+  color:rgba(255,255,255,.55);
+  font-size:14.5px;
+  margin-bottom:24px;
+  line-height:1.65;
+  max-width:380px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
 
-/* COMMENTS */
-.comments{max-width:660px;margin:0 auto;padding:0 20px 28px}
-.ctitle{font-size:15px;font-weight:700;margin-bottom:14px}
+.btn-cta{
+  display:block;
+  width:100%;
+  max-width:380px;
+  margin:0 auto;
+  background:var(--accent);
+  color:#fff;
+  padding:18px 24px;
+  border-radius:9px;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:all .22s;
+  letter-spacing:.02em;
+  position:relative;
+  overflow:hidden;
+}
+.btn-cta::after{
+  content:'';
+  position:absolute;
+  top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  transition:left .5s;
+}
+.btn-cta:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(185,28,28,.45)}
+.btn-cta:hover::after{left:100%}
+.cta-note{font-size:11px;color:rgba(255,255,255,.32);margin-top:12px;position:relative}
+
+/* ── COMMENTS ── */
+.comments{max-width:660px;margin:0 auto;padding:0 20px 30px}
+.ctitle{font-size:15px;font-weight:700;margin-bottom:16px;color:var(--text)}
 .comment{display:flex;gap:10px;padding:14px 0;border-top:1px solid var(--border)}
 .cav{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
 .cname{font-weight:600;color:var(--text);font-size:12.5px;margin-bottom:3px}
 .cname span{font-weight:400;color:var(--light);font-size:11.5px;margin-left:6px}
 .cbody{font-size:13.5px;line-height:1.65;color:#444}
 
-.disclaimer{max-width:660px;margin:0 auto;padding:16px 20px 40px;font-size:11px;color:var(--light);line-height:1.65;border-top:1px solid var(--border)}
+.disclaimer{max-width:660px;margin:0 auto;padding:16px 20px 44px;font-size:11px;color:var(--light);line-height:1.65;border-top:1px solid var(--border)}
 
-/* STICKY */
-.sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-top:1px solid var(--border);padding:10px 16px;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:10px;transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+/* ── STICKY BAR ── */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--border);
+  padding:10px 16px;
+  z-index:100;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 -4px 20px rgba(0,0,0,.07);
+}
 .sticky.show{transform:translateY(0)}
-.sticky-txt{font-size:13px;font-weight:500;color:#444;flex:1;min-width:0}
-.sticky-btn{background:var(--accent);color:#fff;padding:10px 20px;border-radius:7px;font-weight:700;font-size:13.5px;border:none;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif;flex-shrink:0;transition:background .18s}
+.sticky-txt{font-size:13px;font-weight:500;color:#444;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-btn{
+  background:var(--accent);color:#fff;
+  padding:10px 20px;border-radius:7px;
+  font-weight:700;font-size:13.5px;
+  border:none;cursor:pointer;white-space:nowrap;
+  font-family:'Inter',sans-serif;flex-shrink:0;
+  transition:background .18s;
+}
 .sticky-btn:hover{background:var(--accent2)}
 
-@media(max-width:480px){
-  .article{padding:24px 16px 0}
-  .hero{height:200px}
-  .mega-cta{padding:28px 18px;margin:28px -4px}
-  .comments{padding:0 16px 24px}
-  .disclaimer{padding:14px 16px 36px}
-  .sticky-txt{font-size:12px}
+/* ── MOBILE ── */
+@media(max-width:520px){
+  .hero-section{padding:40px 18px 0;min-height:480px}
+  .mega-cta{padding:30px 18px;margin:28px -4px}
+  .article{padding:22px 16px 0}
+  .comments{padding:0 16px 26px}
+  .disclaimer{padding:14px 16px 40px}
 }
 </style>
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="/">Home</a>
-  <a href="/study">Study</a>
-  <a href="/thanks">Thanks</a>
-</nav>
-
+<!-- NAV -->
 <nav class="nav">
-  <div class="nav-logo">Women's <em>Health</em> Insider</div>
-  <div class="nav-tag">Sponsored</div>
+  <a class="nav-logo" href="/">Women's <em>Health</em> Insider</a>
+  <span class="nav-sponsored">Sponsored</span>
 </nav>
 
-<article class="article">
-  <div class="cat-tag w1">🔥 Trending This Week</div>
-  <h1 class="w2">She Was Told <em>"It's Just Your Age"</em> — 6 Months Later, She'd Lost 37 Pounds Without the Gym</h1>
-  <p class="deck w3">How a frustrated 43-year-old mom discovered the real reason women over 40 can't lose weight — and what she did about it in 21 days.</p>
+<!-- ══ WOW HERO ══ -->
+<div class="hero-section">
+  <div class="hero-inner">
 
-  <div class="byline w4">
-    <div class="bav">DR</div>
-    <div>
-      <div class="bname">Dr. Rebecca Shaw, Health Editor</div>
-      <div class="bdate">June 12, 2025 · 6 min read</div>
-    </div>
-  </div>
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span id="vcount">2,847</span>&nbsp;women reading this now
+    </div>
 
-  <div class="hero wh">
-    <div class="hero-cap">Jennifer, 43, before discovering the method vs. 6 months after. Photo provided.</div>
-  </div>
-  <div class="img-note w5">Results based on personal experience. Individual results may vary.</div>
+    <h1 class="hero-headline">
+      She Was Told<br>
+      <em>"It's Just Your Age"</em><br>
+      — 6 Months Later,<br>She'd Lost 37 Lbs
+    </h1>
 
-  <div class="body">
-    <p class="lead">Jennifer Lawson remembers the exact moment she decided something had to change. She was getting dressed for her daughter's school recital — and nothing fit.</p>
+    <p class="hero-sub">
+      How a frustrated 43-year-old mom discovered the real reason women over 40 can't lose weight — and what changed everything in just 21 days, without a single gym session.
+    </p>
 
-    <p><em>"I ended up wearing my husband's oversized blazer just to hide my body,"</em> she recalls. <em>"I sat in that auditorium feeling completely invisible. Not because nobody noticed me — but because I'd stopped <strong>wanting</strong> to be noticed at all."</em></p>
+    <div class="hero-byline">
+      <div class="hero-av">DR</div>
+      <div>
+        <div class="hero-byline-name">Dr. Rebecca Shaw, Health Editor</div>
+        <div class="hero-byline-date">June 12, 2025 · 6 min read</div>
+      </div>
+    </div>
 
-    <p>At 43, Jennifer was exhausted before noon. She'd gained 40 pounds since her late thirties. She'd tried everything — Weight Watchers, Keto, intermittent fasting, a gym membership she used for four months until her knees gave out. Nothing worked.</p>
-
-    <h2>The Breaking Point</h2>
-
-    <div class="pullquote">"My doctor told me to 'eat less and move more.' I wanted to scream. I <strong>was</strong> trying. Harder than I ever had in my life. And I was still gaining weight."</div>
-
-    <p>She's far from alone. Research confirms that women over 40 face a unique metabolic challenge that most programs completely ignore. Declining estrogen fundamentally changes how the body stores fat — and the advice designed for 25-year-olds often backfires spectacularly for women in their forties.</p>
-
-    <p>Even more alarming: intense exercise can actually <strong>increase cortisol levels</strong> in women over 40, leading to more fat storage around the midsection. The very thing doctors recommend is making the problem worse.</p>
-
-    <h2>The Discovery That Changed Everything</h2>
-
-    <p>Jennifer's turning point came from a nutritional specialist who had spent over a decade studying metabolism specifically in women over 40. The approach was surprisingly simple:</p>
-
-    <p><strong>No gym. No extreme diets. No eliminating food groups.</strong> Just a clear system built around how a woman's body actually functions after 40 — not how it functioned fifteen years ago.</p>
-
-    <div class="pullquote">"By week two, I was sleeping properly for the first time in years. By week three, my jeans were looser. By month two, I'd dropped 14 pounds — and hadn't done a single burpee."</div>
-
-    <h2>Six Months Later</h2>
-
-    <p>Jennifer had lost <strong>37 pounds</strong>. But the number was only part of the story.</p>
-
-    <p><em>"I sleep through the night. My energy is back. My mood swings are gone. My husband says I look like the woman he married 20 years ago. Honestly? I feel <strong>better</strong> than I did at 25."</em></p>
-
-    <div class="results-box">
-      <h4>What women are reporting after the program</h4>
-      <ul>
-        <li><strong>Margaret, 51:</strong> "Down 28 pounds in 4 months. I look forward to getting dressed every morning."</li>
-        <li><strong>Diana, 45:</strong> "Lost 19 pounds. I have energy to keep up with my kids again."</li>
-        <li><strong>Susan, 48:</strong> "My doctor couldn't believe my bloodwork. Everything improved."</li>
-        <li><strong>Karen, 52:</strong> "Spent $4,000 on a trainer and lost nothing. This worked in three weeks."</li>
-      </ul>
-    </div>
-
-    <p>The program — <strong>The Slim After 40 Blueprint</strong> — has now helped over 12,000 women break through the weight loss plateau that comes after 40. If you've ever felt like your body is working against you, this is probably why.</p>
-
-    <div class="mega-cta">
-      <div class="viewers"><span class="rdot"></span><span id="vcount">2,847</span> women viewing this now</div>
-      <h3>Ready to See What This Can Do for You?</h3>
-      <p>Join 12,000+ women who stopped struggling and started seeing real results — no gym required.</p>
-      <a href="sales.html" class="btn-cta" onclick="fbq('track','ViewContent')">
-        See the Full Program →
-      </a>
-      <div class="cta-note">🔒 Secure &nbsp;·&nbsp; ⚡ Instant Access &nbsp;·&nbsp; ↩️ 24-Hour Money-Back</div>
-    </div>
-  </div>
-</article>
-
-<div class="comments">
-  <div class="ctitle">💬 Comments (147)</div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">LM</div>
-    <div><div class="cname">Linda M. <span>· 2 days ago</span></div><div class="cbody">I was VERY skeptical but I just hit week 4 and I'm down 11 pounds. I haven't changed my weight in 3 years. This is life changing. Thank you!!</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#ec4899,#be185d)">PA</div>
-    <div><div class="cname">Patricia A. <span>· 5 days ago</span></div><div class="cbody">My sister sent me this. I'm 49 and was starting to think it was too late for me. Two weeks in and the bloating alone being gone is worth everything.</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#f97316,#c2410c)">DS</div>
-    <div><div class="cname">Donna S. <span>· 1 week ago</span></div><div class="cbody">Just ordered. If even half of what these women say is true, it's worth every penny. Will report back! 🤞</div></div>
-  </div>
-  <div class="comment">
-    <div class="cav" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">RH</div>
-    <div><div class="cname">Rachel H. <span>· UPDATE · 1 week ago</span></div><div class="cbody">UPDATE: 6 weeks in. Down 15 pounds. Sleeping through the night for the first time in years. This is real. 💕</div></div>
-  </div>
+  </div>
+  <div class="hero-fade"></div>
 </div>
 
-<div class="disclaimer">*Individual results may vary. This is sponsored content containing affiliate links. Not intended as medical advice. Consult your healthcare provider before starting any new program.</div>
+<!-- ══ ARTICLE BODY ══ -->
+<article class="article">
+  <div class="body">
 
+    <p class="lead">Jennifer Lawson remembers the exact moment she decided something had to change. She was getting dressed for her daughter's school recital — and nothing fit.</p>
+
+    <p><em>"I ended up wearing my husband's oversized blazer just to hide my body,"</em> she recalls. <em>"I sat in that auditorium feeling completely invisible. Not because nobody noticed me — but because I'd stopped <strong>wanting</strong> to be noticed at all."</em></p>
+
+    <p>At 43, Jennifer was exhausted before noon. She'd gained 40 pounds since her late thirties. She had tried everything — Weight Watchers, Keto, intermittent fasting, a gym membership she stuck to for four months until her knees gave out. Nothing worked. And nobody could tell her why.</p>
+
+    <h2>The Breaking Point</h2>
+
+    <div class="pullquote">"My doctor told me to 'eat less and move more.' I wanted to scream. I <strong>was</strong> trying. Harder than I ever had. And I was still gaining weight."</div>
+
+    <p>She's far from alone. Research confirms that women over 40 face a unique metabolic challenge that most programs completely ignore. Declining estrogen fundamentally changes how the body stores fat — and advice designed for 25-year-olds often backfires spectacularly for women in their forties.</p>
+
+    <p>Even more alarming: intense exercise can actually <strong>increase cortisol levels</strong> in women over 40, leading to more fat storage around the midsection. The very thing doctors tell you to do is making the problem worse.</p>
+
+    <h2>The Discovery</h2>
+
+    <p>Jennifer's turning point came from a nutritional specialist who had spent over a decade studying metabolism specifically in women over 40. The approach was surprisingly simple:</p>
+
+    <p><strong>No gym. No extreme diets. No eliminating food groups.</strong> Just a clear system built around how a woman's body actually functions at this stage of life — not how it functioned fifteen years ago.</p>
+
+    <div class="pullquote">"By week two, I was sleeping properly for the first time in years. By week three, my jeans were looser. By month two, I'd dropped 14 pounds — and hadn't done a single burpee."</div>
+
+    <h2>Six Months Later</h2>
+
+    <p>Jennifer had lost <strong>37 pounds</strong>. But the number on the scale was only part of the story.</p>
+
+    <p><em>"I sleep through the night. My energy is back. My mood swings are gone. My husband says I look like the woman he married. Honestly? I feel <strong>better</strong> than I did at 25."</em></p>
+
+    <div class="results-box">
+      <h4>What other women are reporting</h4>
+      <ul>
+        <li><strong>Margaret, 51:</strong> "Down 28 pounds in 4 months. I look forward to getting dressed every morning."</li>
+        <li><strong>Diana, 45:</strong> "Lost 19 pounds. I finally have energy to keep up with my kids again."</li>
+        <li><strong>Susan, 48:</strong> "My doctor couldn't believe my bloodwork. Everything improved."</li>
+        <li><strong>Karen, 52:</strong> "Spent $4,000 on a trainer and lost nothing. This worked in three weeks."</li>
+      </ul>
+    </div>
+
+    <p>The program — <strong>The Slim After 40 Blueprint</strong> — has now helped over 12,000 women break through the weight-loss plateau that comes after 40. If you've ever felt like your body is working against you, this is probably why. And now you can do something about it.</p>
+
+    <!-- MEGA CTA -->
+    <div class="mega-cta">
+      <div class="viewers-pill">
+        <span class="rdot"></span>
+        <span id="vcount2">2,847</span>&nbsp;women reading this now
+      </div>
+      <h3>Ready to See What This Can Do for You?</h3>
+      <p>Join 12,000+ women who stopped fighting their body — and started finally seeing real results.</p>
+      <a href="index.html" class="btn-cta" onclick="fbq('track','ViewContent')">
+        See the Full Program →
+      </a>
+      <div class="cta-note">🔒 Secure &nbsp;·&nbsp; ⚡ Instant Access &nbsp;·&nbsp; ↩️ 24-Hour Money-Back</div>
+    </div>
+
+  </div>
+</article>
+
+<!-- COMMENTS -->
+<div class="comments">
+  <div class="ctitle">💬 Comments (147)</div>
+
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">LM</div>
+    <div>
+      <div class="cname">Linda M. <span>· 2 days ago</span></div>
+      <div class="cbody">I was VERY skeptical but I just hit week 4 and I'm down 11 pounds. I haven't changed my weight in 3 years no matter what I tried. This is life changing!!</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#ec4899,#be185d)">PA</div>
+    <div>
+      <div class="cname">Patricia A. <span>· 5 days ago</span></div>
+      <div class="cbody">My sister sent me this. I'm 49 and was starting to think it was just too late. Two weeks in and the bloating alone being gone is worth everything.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#f97316,#c2410c)">DS</div>
+    <div>
+      <div class="cname">Donna S. <span>· 1 week ago</span></div>
+      <div class="cbody">Just ordered after reading the comments. If even half of what these women say is true, it's worth every penny. Will report back! 🤞</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="cav" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">RH</div>
+    <div>
+      <div class="cname">Rachel H. <span>· UPDATE · 1 week ago</span></div>
+      <div class="cbody">UPDATE: 6 weeks in. Down 15 pounds. Sleeping through the night for the first time in years. This is absolutely real. 💕</div>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  *Individual results may vary. This is sponsored content containing affiliate links. Not intended as medical advice. Consult your healthcare provider before starting any new program.
+</div>
+
+<!-- STICKY BAR -->
 <div class="sticky" id="sticky">
-  <div class="sticky-txt">🔥 12,000+ women have tried this</div>
-  <button class="sticky-btn" onclick="window.location.href='sales.html'">See the Program →</button>
+  <div class="sticky-txt">🔥 12,000+ women have tried this</div>
+  <button class="sticky-btn" onclick="window.location.href='index.html'">See the Program →</button>
 </div>
 
 <script>
-let shown=false;
-window.addEventListener('scroll',()=>{if(window.scrollY>500&&!shown){document.getElementById('sticky').classList.add('show');shown=true}});
-setInterval(()=>{const el=document.getElementById('vcount');if(el){const v=parseInt(el.textContent.replace(',',''));el.textContent=(Math.max(2600,Math.min(3400,v+Math.floor(Math.random()*9)-4))).toLocaleString()}},5000);
+// Sticky after scroll
+let shown = false;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600 && !shown) {
+    document.getElementById('sticky').classList.add('show');
+    shown = true;
+  }
+});
+
+// Live viewer count sync
+function updateCount(v) {
+  const next = Math.max(2600, Math.min(3500, v + Math.floor(Math.random() * 9) - 4));
+  ['vcount','vcount2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = next.toLocaleString();
+  });
+  return next;
+}
+let count = 2847;
+setInterval(() => { count = updateCount(count); }, 5000);
 </script>
 </body>
 </html>
